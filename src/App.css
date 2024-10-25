@@ -1,0 +1,17 @@
+@font-face {
+  font-family: font-1;
+  src: url(./assets/NicoMoji-Regular.ttf);
+}
+#home{
+  background-color: rgba(255, 255, 255, 0.466);
+  background-blend-mode: overlay;
+  background-image: url(https://s3-alpha-sig.figma.com/img/8fd6/0453/3d69feb8c5ab91efe76f99386ba0e272?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DNRUEqGqBLm-hlywVES53NSW3UFaWzhkA9iBieYE6rZSzWggBCZfbFB9O9GOc0IOs-C270OSECoDQNCq0jMXmqKuUpBVq5IPdybMH0vuLTMBbNLiAIBaCzh4ssz2qGcIPxrbM6aqR44pyP5YPny-HVaq1HidxV8MrXpCWZlQXz3zUt5bQAGnpl8v4pZak440LTWoHByJYw4xLQoJcFJDGZdzqrVImDt2-3vu52Sh2AndCFpM8qAcmwcl38uMtDvpmGm2s6paRAWFb-K3ujk4nUduTcsGJvv5~~xJKieTx8iUqxOPW6uG9xTctfCuvKW3ZjlDSsKn1ABWphao6Qveng__);
+  background-size: cover;
+  background-position: top;
+}
+span{
+  color: #ae1d1d
+}
+.nico{
+  font-family: font-1;
+}

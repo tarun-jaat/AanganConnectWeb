@@ -3,7 +3,7 @@ import { GoDotFill } from "react-icons/go";
 
 function About() {
   return (
-    <div className="w-full px-12">
+    <div className="w-full bg-[#FBFBFB] px-12">
       <div className="w-full h-[35vh] flex flex-col items-center justify-end p-3">
         <h1 className="nico text-[4vw]">
           AANGAN <span>CONNECT</span>

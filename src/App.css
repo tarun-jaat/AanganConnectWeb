@@ -6,6 +6,10 @@
   font-family: font-2;
   src: url(./assets/inria-sans.regular.otf);
 }
+@font-face {
+  font-family: font-3;
+  src: url(./assets/IslandMoments-Regular.ttf);
+}
 #home{
   background-color: rgba(255, 255, 255, 0.466);
   background-blend-mode: overlay;
@@ -21,4 +25,7 @@ span{
 }
 .inria{
   font-family: font-2;
+}
+.island{
+  font-family: font-3;
 }

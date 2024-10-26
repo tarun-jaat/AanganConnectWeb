@@ -1,6 +1,6 @@
 import React from "react";
 import appStore from '../assets/appstore.png'
-import playStore from '../assets/image.png'
+import playStore from '../assets/play.png'
 
 const Home = () => {
   return (

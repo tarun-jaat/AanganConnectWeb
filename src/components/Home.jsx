@@ -1,13 +1,14 @@
 import React from "react";
 import appStore from '../assets/appstore.png'
-import playStore from '../assets/playstore.png'
+import playStore from '../assets/image.png'
 
 const Home = () => {
   return (
     <>
+    <div className="flex h-[150vh] flex-col">
       <div
         id="home"
-        className="w-full p-3 md:h-screen relative flex flex-col md:flex-row gap-4 overflow-hidden"
+        className="w-full p-3 md:h-screen h-screen relative flex flex-col md:flex-row gap-4 overflow-hidden"
       >
         <div className="w-full h-[40vh] md:h-full md:w-[60%] py-5 md:ml-8 flex flex-col gap-y-3 md:gap-y-[1.5vw] items-center justify-end md:justify-center md:items-start">
           <h1 className="text-4xl md:text-7xl nico text-[#585858]">
@@ -134,6 +135,7 @@ const Home = () => {
        </div>
         </div>
       </div>
+    </div>
     </>
   );
 };

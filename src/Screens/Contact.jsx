@@ -1,64 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import contact from "../assets/contact.png";
+import bg from '../assets/bg.png'
 
 const Contact = () => {
+  const [currentIndiex, setcurrentIndiex] = useState(0)
+  const slidesRef = useRef([])
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full p-2 pt-[6vw] relative ">
-        <div className="w-full h-full flex absolute z-[-1]">
-          <svg
-            width="925"
-            height="875"
-            viewBox="0 0 925 875"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.1" filter="url(#filter0_d_64_9)">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M4 0H921V867H4V0ZM5.43281 1.54821H117.192V122.309H5.43281V1.54821ZM120.058 1.54821H231.817V122.309H120.058V1.54821ZM346.442 1.54821H234.683V122.309H346.442V1.54821ZM349.308 1.54821H461.067V122.309H349.308V1.54821ZM575.692 1.54821H463.933V122.309H575.692V1.54821ZM578.558 1.54821H690.317V122.309H578.558V1.54821ZM804.942 1.54821H693.183V122.309H804.942V1.54821ZM117.192 125.405H5.43281V246.166H117.192V125.405ZM120.058 125.405H231.817V246.166H120.058V125.405ZM346.442 125.405H234.683V246.166H346.442V125.405ZM349.308 125.405H461.067V246.166H349.308V125.405ZM578.558 125.405H690.317V246.166H578.558V125.405ZM807.808 125.405H919.567V246.166H807.808V125.405ZM117.192 249.262H5.43281V370.023H117.192V249.262ZM346.442 249.262H234.683V370.023H346.442V249.262ZM349.308 249.262H461.067V370.023H349.308V249.262ZM575.692 249.262H463.933V370.023H575.692V249.262ZM578.558 249.262H690.317V370.023H578.558V249.262ZM346.442 373.12H234.683V493.88H346.442V373.12ZM349.308 373.12H461.067V493.88H349.308V373.12ZM578.558 373.12H690.317V493.88H578.558V373.12ZM804.942 373.12H693.183V493.88H804.942V373.12ZM807.808 373.12H919.567V493.88H807.808V373.12ZM117.192 496.977H5.43281V617.737H117.192V496.977ZM120.058 496.977H231.817V617.737H120.058V496.977ZM346.442 496.977H234.683V617.737H346.442V496.977ZM349.308 496.977H461.067V617.737H349.308V496.977ZM575.692 496.977H463.933V617.737H575.692V496.977ZM804.942 496.977H693.183V617.737H804.942V496.977ZM117.192 620.834H5.43281V741.595H117.192V620.834ZM120.058 620.834H231.817V741.595H120.058V620.834ZM349.308 620.834H461.067V741.595H349.308V620.834ZM575.692 620.834H463.933V741.595H575.692V620.834ZM578.558 620.834H690.317V741.595H578.558V620.834ZM804.942 620.834H693.183V741.595H804.942V620.834ZM807.808 620.834H919.567V741.595H807.808V620.834ZM120.058 744.691H231.817V865.452H120.058V744.691ZM346.442 744.691H234.683V865.452H346.442V744.691ZM575.692 744.691H463.933V865.452H575.692V744.691ZM578.558 744.691H690.317V865.452H578.558V744.691Z"
-                fill="#FFEA29"
-              />
-            </g>
-            <defs>
-              <filter
-                id="filter0_d_64_9"
-                x="0"
-                y="0"
-                width="925"
-                height="875"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                />
-                <feOffset dy="4" />
-                <feGaussianBlur stdDeviation="2" />
-                <feComposite in2="hardAlpha" operator="out" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow_64_9"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow_64_9"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg>
+        <div className="w-full h-full flex top-0 left-0 absolute z-[-1]">
+         <img className="w-full h-full object-cover" src={bg} alt="" />
         </div>
         <div className="w-full px-10 flex h-[85vh] items-center justify-center">
           <div className="w-[50%] h-[25vw] flex items-end flex-col justify-center px-8 rounded-l-3xl shadow-2xl shadow-zinc-500 bg-white">
@@ -80,8 +31,8 @@ const Contact = () => {
             <div className="w-full">
               <div className="flex gap-4 border-[1px] w-[25vw] border-[#0086FF] items-center rounded-[10px]">
                 <svg
-                  width="65"
-                  height="61"
+                  width="58"
+                  height="58"
                   viewBox="0 0 65 61"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +56,8 @@ const Contact = () => {
             </div>
             <div className="flex gap-4 border-[1px] w-[30vw] border-[#0086FF] items-center rounded-[10px]">
               <svg
-                width="65"
-                height="62"
+                width="58"
+                height="58"
                 viewBox="0 0 65 62"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +84,8 @@ const Contact = () => {
             </div>
             <div className="flex gap-4 border-[1px] w-[30vw] border-[#0086FF] items-center rounded-[10px]">
               <svg
-                width="65"
-                height="62"
+                width="58"
+                height="58"
                 viewBox="0 0 65 62"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,8 +117,8 @@ const Contact = () => {
             <button className="text-2xl flex gap-3 items-center bg-[#0086FF] inria text-white py-2 px-[4vw] rounded-xl">
               Submit{" "}
               <svg
-                width="43"
-                height="44"
+                width="40"
+                height="40"
                 viewBox="0 0 43 44"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +155,7 @@ const Contact = () => {
             management.
           </p>
         </div>
-        <div className="flex gap-3 p-3 bg-white rounded-[17px]">
+        <div className="flex gap-3 p-3 bg-white shadow-inner-custom rounded-[17px]">
           <input
             className="text-sm outline-none w-[20vw] placeholder:text-[#8B8B8B]"
             type="text"
@@ -220,7 +171,7 @@ const Contact = () => {
           What Our Clients Say About Us
         </h1>
         <div className="flex gap-8">
-          <div className="w-[25vw] scale-[.8] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
+          <div ref={slidesRef} className="w-[25vw] scale-[.8] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
             <div className="w-[90%] flex gap-3 justify-center items-center">
               <div className="w-[5vw] h-[5vw] rounded-full overflow-hidden">
                 <img
@@ -290,7 +241,7 @@ const Contact = () => {
               magna eget nibh in turpis. Consequat duis diam lacus arcu.
             </p>
           </div>
-          <div className="w-[25vw] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
+          <div ref={slidesRef} className="w-[25vw] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
             <div className="w-[90%] flex gap-3 justify-center items-center">
               <div className="w-[5vw] h-[5vw] rounded-full overflow-hidden">
                 <img
@@ -360,7 +311,7 @@ const Contact = () => {
               magna eget nibh in turpis. Consequat duis diam lacus arcu.
             </p>
           </div>
-          <div className="w-[25vw] scale-[.8] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
+          <div ref={slidesRef} className="w-[25vw] scale-[.8] h-[28vw] px-3 bg-white rounded-xl shadow-2xl shadow-zinc-400 flex flex-col justify-center items-center">
             <div className="w-[90%] flex gap-3 justify-center items-center">
               <div className="w-[5vw] h-[5vw] rounded-full overflow-hidden">
                 <img

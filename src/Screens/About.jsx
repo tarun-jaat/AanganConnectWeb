@@ -10,7 +10,7 @@ const About = () => {
           </h1>
           <p className="inria text-2xl w-[97%]">
             Your Trusted Partner in Society Management –{" "}
-            <span>AanganConnec</span>
+            <span>AanganConnect</span>
           </p>
         </div>
         <div className="w-full p-[3vw] bg-white rounded-[50px] flex flex-col items-center">

@@ -11,7 +11,7 @@ const Navbar = () => {
     gsap.to('.navbar', {
       scrollTrigger: {
         trigger: '.navbar',
-        start: '15% top',
+        start: '8% top',
         end: 'bottom top',
         scrub: 1,
       },

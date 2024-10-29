@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.svg";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const NavData = [
     { id: 1, title: "home", path: "/" },
     { id: 2, title: "about", path: "/about" },
@@ -13,7 +15,7 @@ const Navbar = () => {
     { id: 5, title: "contact us", path: "/contact" },
     // { id: 6, title: "testimonials", path: "/testimonials"},
   ];
-  
+
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
@@ -27,7 +29,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <div className={`w-full py-4 flex justify-between fixed z-[99] px-5 items-center ${scrolled ? 'bg-white':'bg-transparent'}`}>
+    <div className="w-full h-[12vh] flex justify-between fixed z-[99] px-5 items-center bg-[#fff]">
       <div>
         { scrolled ? (<h1 className="nico">Aangan Connect</h1>):(
           <img
